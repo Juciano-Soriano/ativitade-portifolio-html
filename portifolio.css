@@ -1,225 +1,287 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Corpo do site */
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #f0f2f5;
-    color: #333;
-    padding: 20px;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Cabeçalho */
-  header {
-    background-color: #004d99;
-    color: white;
-    text-align: center;
-    padding: 30px 0;
-    margin-bottom: 20px;
-  }
-  
-  header h1 {
-    font-size: 2.5rem;
-  }
-  
-  header h2 {
-    font-size: 1.3rem;
-    font-weight: normal;
-  }
-  
-  /* Seções principais */
-  section {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  section h3 {
-    color: #004d99;
-    margin-bottom: 15px;
-  }
-  
-  /* Perfil com imagem */
-  .perfil div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .perfil img {
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border: 3px solid #004d99;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Corpo do site */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f0f2f5;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #004d99;
+  color: #fff;
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  padding: 30px 0 20px 0;
+  margin-bottom: 20px;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+header h2 {
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+
+/* Seções principais */
+section {
+  background-color: #fff;
+  width: 100%;
+  max-width: 900px;
+  padding: 24px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+section h3 {
+  color: #004d99;
+  margin-bottom: 15px;
+}
+
+/* Perfil com imagem */
+.perfil div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.perfil img {
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  border: 3px solid #004d99;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.perfil p {
+  text-align: justify;
+  margin-top: 20px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* Dropdowns (Habilidades e Ferramentas) */
+.habilidades, .ferramentas {
+  position: relative;
+  display: inline-block;
+}
+
+.habilidades ul,
+.ferramentas ul {
+  list-style: none;
+  padding: 10px 15px;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-top: 5px;
+  z-index: 10;
+  min-width: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.habilidades:hover ul,
+.ferramentas:hover ul {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Listas */
+ol, ul {
+  margin-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* Tabela de projetos */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1.5px solid #004d99;
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #004d99;
+  color: #fff;
+}
+
+th, td {
+  border: 1px solid #004d99;
+}
+
+table thead tr:first-child th:first-child {
+  border-top-left-radius: 12px;
+}
+
+table thead tr:first-child th:last-child {
+  border-top-right-radius: 12px;
+}
+
+table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+
+table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+thead {
+  background-color: #004d99;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #e0f0ff;
+}
+
+/* Navegação - Redes Sociais */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #004d99;
+  font-weight: bold;
+  transition: color 0.3s;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+nav ul li a:hover {
+  color: #0073e6;
+  background: #e6f2ff;
+}
+
+nav ul li a::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+  background-position: center;
+}
+
+nav ul li a[href*="linkedin"]::before {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/174/174857.png');
+}
+
+nav ul li a[href*="github"]::before {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/25/25231.png');
+}
+
+nav ul li a[href*="instagram"]::before {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/2111/2111463.png');
+}
+
+/* Aside */
+aside {
+  background-color: #fff8e1;
+  border-left: 5px solid #ffcc00;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #004d99;
+  color: #fff;
+  border-radius: 0 0 10px 10px;
+  width: 100%;
+  max-width: 900px;
+  margin-top: auto;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.07);
+}
+
+/* Responsividade */
+@media (max-width: 980px) {
+  header, section, aside, footer {
+    max-width: 98vw;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
   .perfil p {
-    text-align: justify;
-    margin-top: 20px;
-    line-height: 1.6;
+    max-width: 98vw;
   }
-  
-  /* Habilidades */
-  .habilidades {
-    size: 100px;
-    position: relative;
-    display: inline-block;
-  }
+}
 
-  .habilidades ul {
-    list-style: none;
-    padding: 0;
-    display: none;
-    position: absolute;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 5px;
-    z-index: 10;
-    flex-wrap: wrap;
-    gap: 15px;
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6rem;
   }
-
-  .habilidades:hover ul {
-    display: flex;
+  header h2 {
+    font-size: 1rem;
   }
-  /* Ferramentas Utilizadas */
-  .ferramentas {
-    position: relative;
-    display: inline-block;
+  .perfil img {
+    width: 100px;
+    height: 100px;
   }
-
-  .ferramentas ul {
-    list-style: none;
-    padding: 0;
-    display: none;
-    position: absolute;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 5px;
-    z-index: 10;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .ferramentas:hover ul {
-    display: flex;
-  }
-
-  /* Listas */
-  ol, ul {
-    margin-left: 20px;
-  }
-  
-  li {
-    margin-bottom: 5px;
-  }
-  
-  /* Tabela de projetos */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-  }
-  
-  th, td {
-    padding: 10px;
-    text-align: left;
-  }
-  
-  thead {
-    background-color: #004d99;
-    color: white;
-  }
-  
-  tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  tbody tr:hover {
-    background-color: #e0f0ff;
-  }
-  
-  /* Navegação - Redes Sociais */
   nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 10px;
   }
-  
-  nav a {
-    text-decoration: none;
-    color: #004d99;
-    font-weight: bold;
-    transition: color 0.3s;
+  nav ul li a::before {
+    width: 24px;
+    height: 24px;
   }
-  
-  nav a:hover {
-    color: #0073e6;
-  }
-  
-  /* Aside */
-  aside {
-    background-color: #fff8e1;
-    border-left: 5px solid #ffcc00;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-  }
-  
-  /* Rodapé */
-  footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #004d99;
-    color: white;
-    border-radius: 0 0 10px 10px;
-  }
-    /* Estilo para ícones de redes sociais */
-    nav ul li a {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    nav ul li a::before {
-      content: '';
-      display: block;
-      margin-left: center;
-      margin-right: center;
-      width: 40px;
-      height: 40px;
-      background-size: cover;
-      
-    }
-
-    nav ul li a[href*="linkedin"]::before {
-      background-image: url('https://cdn-icons-png.flaticon.com/512/174/174857.png');
-    }
-
-    nav ul li a[href*="github"]::before {
-      background-image: url('https://cdn-icons-png.flaticon.com/512/25/25231.png');
-    }
-
-    nav ul li a[href*="instagram"]::before {
-      background-image: url('https://cdn-icons-png.flaticon.com/512/2111/2111463.png');
-    }
+}
