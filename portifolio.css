@@ -12,6 +12,10 @@
     background-color: #f0f2f5;
     color: #333;
     padding: 20px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
   }
   
   /* Cabeçalho */
@@ -49,16 +53,77 @@
   /* Perfil com imagem */
   .perfil div {
     display: flex;
-    align-items: left;
-    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
   }
   
   .perfil img {
-    border-radius: 10px;
+    border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-style: solid;
+    border: 3px solid #004d99;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .perfil p {
+    text-align: justify;
+    margin-top: 20px;
+    line-height: 1.6;
   }
   
+  /* Habilidades */
+  .habilidades {
+    size: 100px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .habilidades ul {
+    list-style: none;
+    padding: 0;
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    z-index: 10;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .habilidades:hover ul {
+    display: flex;
+  }
+  /* Ferramentas Utilizadas */
+  .ferramentas {
+    position: relative;
+    display: inline-block;
+  }
+
+  .ferramentas ul {
+    list-style: none;
+    padding: 0;
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    z-index: 10;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .ferramentas:hover ul {
+    display: flex;
+  }
+
   /* Listas */
   ol, ul {
     margin-left: 20px;
@@ -129,4 +194,32 @@
     color: white;
     border-radius: 0 0 10px 10px;
   }
-  
+    /* Estilo para ícones de redes sociais */
+    nav ul li a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav ul li a::before {
+      content: '';
+      display: block;
+      margin-left: center;
+      margin-right: center;
+      width: 40px;
+      height: 40px;
+      background-size: cover;
+      
+    }
+
+    nav ul li a[href*="linkedin"]::before {
+      background-image: url('https://cdn-icons-png.flaticon.com/512/174/174857.png');
+    }
+
+    nav ul li a[href*="github"]::before {
+      background-image: url('https://cdn-icons-png.flaticon.com/512/25/25231.png');
+    }
+
+    nav ul li a[href*="instagram"]::before {
+      background-image: url('https://cdn-icons-png.flaticon.com/512/2111/2111463.png');
+    }
